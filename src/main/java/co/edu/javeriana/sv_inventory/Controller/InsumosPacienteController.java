@@ -23,13 +23,13 @@ public class InsumosPacienteController {
     @Autowired
     private InsumosPacienteService service;
 
-    //http://localhost:8080/insumos-paciente
+    //http://localhost:8087/insumos-paciente
     @PostMapping
     public ResponseEntity<InsumosPacienteEntity> create(@RequestBody InsumosPacienteEntity entity) {
         return ResponseEntity.ok(service.save(entity));
     }
 
-    //http://localhost:8080/insumos-paciente/{pacienteId}
+    //http://localhost:8087/insumos-paciente/{pacienteId}
     @GetMapping("/{pacienteId}")
     public ResponseEntity<List<InsumosPacienteEntity>> getByPaciente(@PathVariable Long pacienteId) {
         return ResponseEntity.ok(service.getByPacienteId(pacienteId));

@@ -22,19 +22,19 @@ public class InsumosController {
     @Autowired
     private InsumosService insumosService;
 
-    //http://localhost:8080/inventario
+    //http://localhost:8087/inventario
     @GetMapping
     public ResponseEntity<List<InsumosEntity>> getAll() {
         return ResponseEntity.ok(insumosService.getAllInsumos());
     }
 
-    //http://localhost:8080/inventario/registro-inventario
+    //http://localhost:8087/inventario/registro-inventario
     @PostMapping("/registro-inventario")
     public ResponseEntity<InsumosEntity> create(@RequestBody InsumosEntity insumo) {
         return ResponseEntity.ok(insumosService.saveInsumo(insumo));
     }
 
-    //http://localhost:8080/inventario/1
+    //http://localhost:8087/inventario/1
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         insumosService.deleteInsumo(id);
