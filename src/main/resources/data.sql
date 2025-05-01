@@ -1,5 +1,11 @@
-INSERT INTO Insumos (nombre, cantidad, fecha, encargado_registro)
-VALUES 
-  ('Guantes', '50', '2024-02-25', 'Admin'),
-  ('Mascarillas', '100', '2024-02-24', 'Usuario1'),
-  ('Alcohol', '30', '2024-02-23', 'Usuario2');
+INSERT INTO turno (name) VALUES ('Mañana');
+INSERT INTO turno (name) VALUES ('Tarde');
+INSERT INTO turno (name) VALUES ('Noche');
+
+INSERT INTO rol (name) VALUES ('Enfermera');
+INSERT INTO rol (name) VALUES ('Admin');
+
+INSERT INTO tipo_identificacion (name) VALUES ('CC');
+INSERT INTO tipo_identificacion (name) VALUES ('TI');
+INSERT INTO tipo_identificacion (name) VALUES ('CE');
+
