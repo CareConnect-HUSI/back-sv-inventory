@@ -16,7 +16,7 @@ public class ActividadService {
     private ActividadRepository actividadRepository;
 
     @Autowired
-private TipoActividadRepository tipoActividadRepository;
+    private TipoActividadRepository tipoActividadRepository;
 
     public ActividadEntity guardarActividad(ActividadEntity actividad) {
         Long tipoId = actividad.getTipoActividad().getId();
