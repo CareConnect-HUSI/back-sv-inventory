@@ -26,10 +26,10 @@ public class ActividadEntity {
     @JoinColumn(name = "tipo_actividad_id", nullable = false)
     private TipoActividadEntity tipoActividad;
 
-
+    private String estado;
     private String descripcion;
     private Integer cantidad;
-    @Column(name = "fecha_registro", updatable = false, insertable = false)
+    @Column(name = "fecha_registro", updatable = false)
     @CreationTimestamp
     private LocalDateTime fechaRegistro;
     private String usuarioRegistra;
@@ -88,5 +88,13 @@ public class ActividadEntity {
 
     public void setUsuarioRegistra(String usuarioRegistra) {
         this.usuarioRegistra = usuarioRegistra; 
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+    
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 }
