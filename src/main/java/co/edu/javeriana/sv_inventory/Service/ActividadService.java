@@ -1,6 +1,7 @@
 package co.edu.javeriana.sv_inventory.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,5 +27,17 @@ public class ActividadService {
     
     public List<ActividadEntity> verActividades() {
         return actividadRepository.findAll();
+    }
+
+    public boolean eliminarActividad(Long id) {
+        System.out.println("Intentando eliminar actividad con ID: " + id);
+        Optional<ActividadEntity> actividad = actividadRepository.findById(id);
+        if (actividad.isPresent()) {
+            System.out.println("Actividad encontrada: " + actividad.get());
+            actividadRepository.deleteById(id);
+            System.out.println("Actividad eliminada con ID: " + id);
+            return true;
+        }
+        return false;
     }
 }
