@@ -31,6 +31,7 @@ public class CorsConfig {
                         HttpMethod.POST.name(),
                         HttpMethod.PUT.name(),
                         HttpMethod.DELETE.name(),
+                        HttpMethod.PATCH.name(),
                         HttpMethod.OPTIONS.name()));
         
                         source.registerCorsConfiguration("/**", config);
